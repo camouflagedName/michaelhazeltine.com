@@ -1,0 +1,5 @@
+.ratio-16x9{
+    @include media-breakpoint-down(sm) {
+        --bs-aspect-ratio: 1x1;
+    }
+}

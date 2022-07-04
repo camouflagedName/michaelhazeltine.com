@@ -1,0 +1,82 @@
+:root {
+    --text-color: #C5C6C7;
+    --darker-bg: #0B0C10;
+    --dark-bg: #1F2833;
+}
+
+.name {
+    font-family: 'Poiret One', cursive;
+    /*font-family: 'Rubik Moonrocks', cursive;*/
+    color: var(--text-color)
+}
+
+#app-surface {
+    background-color: var(--dark-bg)
+}
+
+#comp-surface {
+    background-color: var(--darker-bg)
+}
+
+#app-text {
+    color: var(--text-color);
+}
+
+.app-text {
+    color: var(--text-color);
+}
+
+#app-title {
+    color: #66FCF1;
+}
+
+.list-color-modified {
+    background-color: #0B0C10;
+    color: #C5C6C7;
+}
+
+.list-color-modified-active {
+    background-color: #1F2833;
+    color: #45A29E;
+}
+
+.link-hover-mod:hover {
+    background-color: #45A29E;
+    color: white;
+}
+
+.pagination {
+    background-color: #1F2833;
+}
+
+#contact-links a {
+    text-decoration: none;
+    color: #C5C6C7;
+}
+
+#about-text-tab button {
+    color: #66FCF1;
+}
+
+.project-item-decoration {
+    color: #C5C6C7;
+    background-color: #0B0C10;
+}
+
+.project-item-button-decoration {
+    background-color: #1F2833;
+    border-color: #C5C6C7;
+    color: #C5C6C7;
+}
+
+/*
+#about-text-tab li:hover {
+    background-color: #C5C6C7;
+    color: #06bcee;
+}
+
+.about-text-tab-active {
+    background-color: #0B0C10;
+    color: #1F2833;
+}
+*/
