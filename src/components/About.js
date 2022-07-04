@@ -1,6 +1,6 @@
 import { useState } from "react"
 import aboutText from "../util/aboutText"
-const pic = require("../images/main_pic(cropped).jpg")
+const pic = require("../util/images/main_pic(cropped).jpg")
 
 
 const About = () => {
