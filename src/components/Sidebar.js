@@ -34,7 +34,7 @@ const Sidebar = (props) => {
             </div>
             <div className='w-100 mt-auto mb-4'>
                 <h4 className="text-center app-text">Contact</h4>
-                <div className='row rows-cols-3 text-white text-center' id="contact-links">
+                <div className='row rows-cols-3 text-white text-center fs-5' id="contact-links">
                     <div className='col'><a href="mailto:michael.a.hazeltine@gmail.com"><i className="bi bi-envelope-fill"></i></a></div>
                     <div className='col'><a href="https://www.linkedin.com/in/michael-hazeltine-19972087" target="_blank" rel="noreferrer"><i className="bi bi-linkedin"></i></a></div>
                     <div className='col'><a href="https://www.github.com/camouflagedname" target="_blank" rel="noreferrer"><i className="bi bi-github"></i></a></div>

@@ -18,11 +18,11 @@ const About = () => {
 
         type === "Professional" ? setText(aboutText.professional)
             : type === "Personal" ? setText(aboutText.personal)
-            : setText(aboutText.init)
+                : setText(aboutText.init)
     }
 
     return (
-        <div className="col-sm-7 col-xs-1 offset-1 d-flex justify-content-center">
+        <div className="col-sm-7 col-xs-1 offset-sm-1 d-flex justify-content-center">
             <div className="card border-0 bg-transparent mb-auto mt-auto">
                 <div className="text-center shadow-md">
                     <img className='card-img-top' src={pic} style={{ maxWidth: "400px", maxHeight: "auto" }} alt='main' />

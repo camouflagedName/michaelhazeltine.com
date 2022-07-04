@@ -6,15 +6,15 @@ const Content = (props) => {
 
     return (
         <>
-        {
-            props.page === "Resume" ? 
-                <Resume />
-                :
-            props.page === "Projects" ?
-                <Projects />
-                :
-                <About />
-        }
+            {
+                props.page === "Resume" ?
+                    <Resume />
+                    :
+                    props.page === "Projects" ?
+                        <Projects />
+                        :
+                        <About />
+            }
         </>
     )
 }
