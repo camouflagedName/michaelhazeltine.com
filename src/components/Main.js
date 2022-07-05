@@ -10,10 +10,16 @@ const Main = () => {
     }
 
     return (
-        <div className='d-flex container-fluid vh-100 p-0' id="app-surface" >
-            <Sidebar update={changeContent} />
-            <Content page={page} />
-        </div>
+        <>
+            <div className='d-none d-sm-flex container-fluid vh-100 p-0' id="app-surface" >
+                <Sidebar update={changeContent} />
+                <Content page={page} />
+            </div>
+            <div className='d-sm-none d-flex flex-column container-fluid vh-100 p-0' id="app-surface" >
+                <Sidebar update={changeContent} />
+                <Content page={page} />
+            </div>
+        </>
     )
 }
 
