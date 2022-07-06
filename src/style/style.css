@@ -18,6 +18,10 @@
     background-color: var(--darker-bg)
 }
 
+#sidebar {
+    background-color: var(--darker-bg)
+}
+
 #app-text {
     color: var(--text-color);
 }

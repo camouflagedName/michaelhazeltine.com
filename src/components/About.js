@@ -1,20 +1,42 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import aboutText from "../util/aboutText"
 const pic = require("../util/images/main_pic(cropped).jpg")
 
 
 const About = () => {
     const [text, setText] = useState(aboutText.init)
+    const [init, setInit] = useState(true)
+    const [selected, setSelected] = useState()
+    const [prev, setPrev] = useState()
+    
+    const active = "nav-link fs-4 active bg-dark"
+    const inactive = "nav-link fs-4"
+
+    useEffect(() => {
+        if(init) {
+            const welcome = document.getElementById("welcome")
+            welcome.className = active
+            setSelected("welcome")
+        }
+
+        else {
+            const activeEl = document.getElementById(selected)
+            const prevEl = document.getElementById(prev)
+            activeEl.className = active
+            prevEl.className = inactive
+        }
+    }, [selected, prev, init])
 
     const handleClick = (event) => {
+        const id = event.currentTarget.id
+        setInit(false)
+        setSelected(previous => {
+            setPrev(previous)
+            return id
+        })
+        
         const clickedButton = event.currentTarget
-        const otherButton = document.querySelector(".nav-link.fs-4.active.bg-dark")
         const type = clickedButton.textContent
-
-        if (otherButton.textContent !== clickedButton.textContent) {
-            otherButton.className = "nav-link fs-4"
-            clickedButton.className = "nav-link fs-4 active bg-dark"
-        }
 
         type === "Professional" ? setText(aboutText.professional)
             : type === "Personal" ? setText(aboutText.personal)
@@ -22,7 +44,7 @@ const About = () => {
     }
 
     return (
-        <div className="col-sm-7 offset-sm-1 d-flex justify-content-center vh-100">
+        <div className="col-12 col-sm-7 offset-sm-1 d-flex justify-content-center vh-100">
             <div className="card border-0 bg-transparent mb-auto mt-auto">
                 <div className="text-center shadow-md">
                     <img className='card-img-top' src={pic} style={{ maxWidth: "400px", maxHeight: "auto" }} alt='main' />
@@ -30,13 +52,13 @@ const About = () => {
                 <div className="card-body">
                     <ul className="nav nav-tabs mt-3 nav-fill" id="about-text-tab">
                         <li className="nav-item">
-                            <button className="nav-link fs-4 active bg-dark" type="button" onClick={handleClick}><b>Welcome</b></button>
+                            <button id="welcome" className="nav-link fs-4" type="button" onClick={handleClick}><b>Welcome</b></button>
                         </li>
                         <li className="nav-item">
-                            <button className="nav-link fs-4" type="button" onClick={handleClick}><b>Professional</b></button>
+                            <button id="professional" className="nav-link fs-4" type="button" onClick={handleClick}><b>Professional</b></button>
                         </li>
                         <li className="nav-item">
-                            <button className="nav-link fs-4" type="button" onClick={handleClick}><b>Personal</b></button>
+                            <button id="personal" className="nav-link fs-4" type="button" onClick={handleClick}><b>Personal</b></button>
                         </li>
                     </ul>
                     <div className="tab-content mt-3">

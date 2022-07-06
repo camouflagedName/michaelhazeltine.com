@@ -11,14 +11,11 @@ const Main = () => {
 
     return (
         <>
-            <div className='d-none d-sm-flex container-fluid vh-100 p-0' id="app-surface" >
+            <div className=' d-flex container-fluid min-vh-100 p-0' id="app-surface" >
                 <Sidebar update={changeContent} />
                 <Content page={page} />
             </div>
-            <div className='d-sm-none d-flex flex-column container-fluid p-0' id="app-surface" >
-                <Sidebar update={changeContent} />
-                <Content page={page} />
-            </div>
+
         </>
     )
 }

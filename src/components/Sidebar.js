@@ -4,44 +4,64 @@ import { Offcanvas } from 'bootstrap'
 
 const Sidebar = (props) => {
     const [init, setInit] = useState(true)
+    const [isMobile, setIsMobile] = useState(window.innerWidth >= 576 ? false : true)
     const [collapseToggle, setCollapseToggle] = useState(false)
     const [getOffcanvasEl, setOffcanvasEl] = useState()
     const [activeItem, setActiveItem] = useState()
     const [prevItem, setPrevItem] = useState()
 
+    const mobileSidebarClass = "offcanvas d-sm-none offcanvas-start"
+    const sidebarClass = 'd-none d-sm-flex col-3 justify-content-center flex-column visible'
+    const active = "border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod"
+    const inactive = "rounded list-group-item list-group-item-action list-color-modified link-hover-mod"
+
     const sidebarRef = useRef()
     const aboutRef = useRef()
 
     useEffect(() => {
-        if (window.innerWidth >= 576) {
+        const sidebarEl = sidebarRef.current
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 576) {
+                setIsMobile(false)
+            }
+            else {
+                setIsMobile(true)
+            }
+        })
+
+        if (!isMobile) {
+            sidebarEl.className = sidebarClass
+
             //initialize sidebar
             if (init) {
                 const aboutEl = document.querySelector("#about")
-                aboutEl.className = "border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod"
+                aboutEl.className = active
             }
         }
 
-
         else {
-            const sidebarOffcanvas = sidebarRef.current
-            const offcanvasElement = new Offcanvas(sidebarOffcanvas)
+            setIsMobile(true)
+            sidebarEl.className = mobileSidebarClass
+            sidebarEl.addEventListener('hide.bs.offcanvas', () => setCollapseToggle(false))
+            const offcanvasElement = new Offcanvas(sidebarEl)
 
             //activate offcanvas sidebar
             if (collapseToggle) {
 
                 //initialize
                 if (init) {
-                    aboutRef.current.className = "border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod"
+                    aboutRef.current.className = active
                 }
+
                 offcanvasElement.show()
                 setOffcanvasEl(offcanvasElement)
             }
         }
 
-    }, [init, collapseToggle])
+    }, [init, collapseToggle, isMobile])
 
     const handleClick = (event) => {
-
         const targetEl = event.currentTarget
         const prevActiveEl = document.querySelector(".list-color-modified-active")
 
@@ -49,11 +69,11 @@ const Sidebar = (props) => {
             setPrevItem(prev)
             return targetEl.id
         })
-        
+
         setInit(false)
 
-        prevActiveEl.className = "rounded list-group-item list-group-item-action list-color-modified link-hover-mod"
-        targetEl.className = "border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod"
+        prevActiveEl.className = inactive
+        targetEl.className = active
 
         //update content
         props.update(event.target.textContent)
@@ -76,15 +96,11 @@ const Sidebar = (props) => {
                     </div>
                 </nav>
             </div>
-            <div className='d-none d-sm-flex col-3 justify-content-center flex-column' id="comp-surface">
-                <SidebarContent handleClick={handleClick} aboutRef={aboutRef} />
-            </div>
-            <div className="offcanvas d-sm-none offcanvas-start" id="comp-surface" ref={sidebarRef}>
+            <div id="sidebar" ref={sidebarRef}>
                 <SidebarContent handleClick={handleClick} aboutRef={aboutRef} />
             </div>
         </>
     )
-
 }
 
 export default Sidebar
