@@ -15,7 +15,7 @@ const Main = () => {
                 <Sidebar update={changeContent} />
                 <Content page={page} />
             </div>
-            <div className='d-sm-none d-flex flex-column container-fluid vh-100 p-0' id="app-surface" >
+            <div className='d-sm-none d-flex flex-column container-fluid p-0' id="app-surface" >
                 <Sidebar update={changeContent} />
                 <Content page={page} />
             </div>

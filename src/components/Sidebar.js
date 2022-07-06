@@ -3,39 +3,68 @@ import { SidebarContent } from "./SidebarContent"
 import { Offcanvas } from 'bootstrap'
 
 const Sidebar = (props) => {
+    const [init, setInit] = useState(true)
     const [collapseToggle, setCollapseToggle] = useState(false)
     const [getOffcanvasEl, setOffcanvasEl] = useState()
+    const [activeItem, setActiveItem] = useState()
+    const [prevItem, setPrevItem] = useState()
 
-    const sideBarRef = useRef()
+    const sidebarRef = useRef()
+    const aboutRef = useRef()
 
     useEffect(() => {
-        if(window.innerWidth < 576) {
-            const sidebarOffcanvas = sideBarRef.current
+        if (window.innerWidth >= 576) {
+            //initialize sidebar
+            if (init) {
+                const aboutEl = document.querySelector("#about")
+                aboutEl.className = "border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod"
+            }
+        }
+
+
+        else {
+            const sidebarOffcanvas = sidebarRef.current
             const offcanvasElement = new Offcanvas(sidebarOffcanvas)
-            
-            if(collapseToggle) {
+
+            //activate offcanvas sidebar
+            if (collapseToggle) {
+
+                //initialize
+                if (init) {
+                    aboutRef.current.className = "border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod"
+                }
                 offcanvasElement.show()
                 setOffcanvasEl(offcanvasElement)
             }
         }
 
-    }, [collapseToggle])
+    }, [init, collapseToggle])
 
     const handleClick = (event) => {
-        if(window.innerWidth >= 576) {
-            const listEl = event.currentTarget
-            const activeEl = document.querySelector(".list-color-modified-active")
-            activeEl.className = "rounded list-group-item list-group-item-action list-color-modified link-hover-mod"
-            listEl.className = "border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod"
-        }
 
+        const targetEl = event.currentTarget
+        const prevActiveEl = document.querySelector(".list-color-modified-active")
+
+        setActiveItem(prev => {
+            setPrevItem(prev)
+            return targetEl.id
+        })
+        
+        setInit(false)
+
+        prevActiveEl.className = "rounded list-group-item list-group-item-action list-color-modified link-hover-mod"
+        targetEl.className = "border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod"
+
+        //update content
         props.update(event.target.textContent)
-        if(getOffcanvasEl) {
+
+        //close sidebar
+        if (getOffcanvasEl) {
             getOffcanvasEl.hide()
             setCollapseToggle(false)
         }
     }
-    
+
     return (
         <>
             <div className="d-sm-none">
@@ -48,10 +77,10 @@ const Sidebar = (props) => {
                 </nav>
             </div>
             <div className='d-none d-sm-flex col-3 justify-content-center flex-column' id="comp-surface">
-                <SidebarContent handleClick={handleClick} />
+                <SidebarContent handleClick={handleClick} aboutRef={aboutRef} />
             </div>
-            <div className="offcanvas d-sm-none offcanvas-start" id="comp-surface" ref={sideBarRef}>
-                <SidebarContent handleClick={handleClick} />
+            <div className="offcanvas d-sm-none offcanvas-start" id="comp-surface" ref={sidebarRef}>
+                <SidebarContent handleClick={handleClick} aboutRef={aboutRef} />
             </div>
         </>
     )

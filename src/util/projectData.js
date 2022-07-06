@@ -1,14 +1,28 @@
 const projectData = [
     {
         title: 'GoPursue',
-        description: 'Career exploration app developed using RAILS and REACT',
+        description: 'Career exploration app developed using RAILS and REACT deployed with HEROKU',
         links:
         {
             github: 'https://github.com/camouflagedName/GoPursue_prototype',
             website: 'https://go-pursue-prototype.herokuapp.com/',
         }
         ,
-        date: "May 2022"
+        date: "Aug 2021",
+        stack: {
+            rails: true,
+            django: false,
+            pgsql: true,
+            sqllite: false,
+            python: false,
+            javascript: true,
+            react: true,
+            reactNative: false,
+            bootstrap: true,
+            html: true,
+            css: true
+        },
+        show: true
     },
     {
         title: 'Bomb Squad',
@@ -19,7 +33,21 @@ const projectData = [
             website: 'https://camouflagedname.github.io/Bomb-Squad/',
         }
         ,
-        date: "Jan 2021"
+        date: "Jan 2021",
+        stack: {
+            rails: false,
+            django: false,
+            pgsql: false,
+            sqllite: false,
+            python: false,
+            javascript: true,
+            react: false,
+            reactNative: false,
+            bootstrap: false,
+            html: true,
+            css: true
+        },
+        show: true
     },
     {
         title: 'Color Grid',
@@ -30,7 +58,21 @@ const projectData = [
             website: 'https://main.d1xtuta3lh2pq9.amplifyapp.com/',
         }
         ,
-        date: "May 2022"
+        date: "May 2022",
+        stack: {
+            rails: false,
+            django: false,
+            pgsql: false,
+            sqllite: false,
+            python: false,
+            javascript: true,
+            react: false,
+            reactNative: false,
+            bootstrap: false,
+            html: true,
+            css: false
+        },
+        show: true
     },
     {
         title: 'Covid App',
@@ -41,7 +83,22 @@ const projectData = [
             website: '',
         }
         ,
-        date: "March 2022"
+        date: "March 2022",
+        stack: {
+            rails: false,
+            django: false,
+            pgsql: false,
+            sqllite: false,
+            python: false,
+            javascript: true,
+            react: false,
+            reactNative: true,
+            bootstrap: false,
+            html: true,
+            css: true,
+            expo: true
+        },
+        show: true
     },
     {
         title: 'Dating App',
@@ -52,7 +109,22 @@ const projectData = [
             website: '',
         }
         ,
-        date: "July 2022"
+        date: "July 2022",
+        stack: ["django", "react", "bootstrap"],
+        show: false
+    },
+    {
+        title: 'Add It Up',
+        description: 'Math app built with React and Bootstrap',
+        links:
+        {
+            github: 'https://github.com/camouflagedName/Add_It_Up',
+            website: '',
+        }
+        ,
+        date: "May 2022",
+        stack: ["", "react"],
+        show: true
     },
 
 

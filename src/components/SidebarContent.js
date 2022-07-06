@@ -8,13 +8,13 @@ export const SidebarContent = (props) => {
             </div>
             <div className='w-100 mb-auto mt-auto'>
                 <ul className="list-group">
-                    <li id="about" className="list-group-item list-group-item-action list-color-modified-active link-hover-mod" onClick={props.handleClick} >
+                    <li id="about" className="list-group-item list-group-item-action list-color-modified link-hover-mod" onClick={props.handleClick} ref={props.aboutRef} >
                         <p className='fs-4 text-center'>About Me</p>
                     </li>
-                    <li id="about" className="rounded list-group-item list-group-item-action list-color-modified link-hover-mod" onClick={props.handleClick} >
+                    <li id="projects" className="rounded list-group-item list-group-item-action list-color-modified link-hover-mod" onClick={props.handleClick} >
                         <p className='fs-4 text-center'>Projects</p>
                     </li>
-                    <li id="about" className="rounded list-group-item list-group-item-action list-color-modified link-hover-mod" onClick={props.handleClick} >
+                    <li id="resume" className="rounded list-group-item list-group-item-action list-color-modified link-hover-mod" onClick={props.handleClick} >
                         <p className='fs-4 text-center'>Resume</p>
                     </li>
                     {/*

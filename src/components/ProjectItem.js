@@ -3,15 +3,15 @@ const ProjectItem = (props) => {
 
     const links = props.website === '' ?
         <div className="mt-auto"> 
-            <a href={props.github} target="_blank" rel="noreferrer" className="btn btn-outline-secondary">GitHub</a>
+            <a href={props.github} target="_blank" rel="noreferrer" className="btn btn-outline-secondary mt-2">GitHub</a>
         </div>
         :
         <div className="d-flex row-cols-2 mt-auto">
-            <div className="col">
+            <div className="col mt-3">
                 <a href={props.github} target="_blank" rel="noreferrer" className="btn btn-outline-secondary">GitHub</a>
             </div>
-            <div className="col">
-                <a href={props.website} target="_blank" rel="noreferrer" className="btn btn-outline-secondary">Website</a>
+            <div className="col mt-3">
+                <a href={props.website} target="_blank" rel="noreferrer" className="btn btn-outline-secondary">Demo</a>
             </div>
         </div>
 
