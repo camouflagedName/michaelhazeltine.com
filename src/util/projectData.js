@@ -6,8 +6,7 @@ const projectData = [
         {
             github: 'https://github.com/camouflagedName/GoPursue_prototype',
             website: 'https://go-pursue-prototype.herokuapp.com/',
-        }
-        ,
+        },
         date: "Aug 2021",
         stack: {
             rails: true,
@@ -22,6 +21,19 @@ const projectData = [
             html: true,
             css: true
         },
+        show: true
+    },
+    {
+        title: 'Add It Up',
+        description: 'Responsive and RESTful math app that makes calls to the math.js api. Built with React and Bootstrap and deployed with GH-Pages',
+        links:
+        {
+            github: 'https://github.com/camouflagedName/Add_It_Up',
+            website: 'https://camouflagedname.github.io/Add_It_Up/',
+        }
+        ,
+        date: "May 2022",
+        stack: ["bootstrap", "react"],
         show: true
     },
     {
@@ -113,20 +125,6 @@ const projectData = [
         stack: ["django", "react", "bootstrap"],
         show: false
     },
-    {
-        title: 'Add It Up',
-        description: 'Math app built with React and Bootstrap',
-        links:
-        {
-            github: 'https://github.com/camouflagedName/Add_It_Up',
-            website: '',
-        }
-        ,
-        date: "May 2022",
-        stack: ["", "react"],
-        show: true
-    },
-
 
 ]
 

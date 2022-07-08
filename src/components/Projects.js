@@ -4,9 +4,12 @@ import ProjectItem from "./ProjectItem"
 const Projects = () => {
 
   const data = projectData.map((data, index) => {
-    return (
-      <ProjectItem key={index} title={data.title} description={data.description} github={data.links.github} website={data.links.website} date={data.date} />
-    )
+    if (data.show) {
+      return (
+        <ProjectItem key={index} title={data.title} description={data.description} github={data.links.github} website={data.links.website} date={data.date} />
+      )
+    }
+    else return false
   })
 
   return (
