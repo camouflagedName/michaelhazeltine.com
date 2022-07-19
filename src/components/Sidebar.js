@@ -93,6 +93,7 @@ const Sidebar = (props) => {
                         <button className="navbar-toggler navbar-dark bg-dark" type="button" aria-controls="offcanvasNavbar" onClick={() => setCollapseToggle(true)}>
                             <span className="navbar-toggler-icon"></span>
                         </button>
+                        <h1 className="text-light m-auto">Michael Hazeltine</h1>
                     </div>
                 </nav>
             </div>

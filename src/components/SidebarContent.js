@@ -4,7 +4,7 @@ export const SidebarContent = (props) => {
     return (
         <>
             <div className='w-100 mb-auto mt-4'>
-                <h1 className="text-center name display-4"><b>Michael Hazeltine</b></h1>
+                <h1 className="text-center name display-4"><b>Directory</b></h1>
             </div>
             <div className='w-100 mb-auto mt-auto'>
                 <ul className="list-group">

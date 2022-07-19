@@ -1,4 +1,4 @@
-import About from "./About"
+import About from "./AboutAlt"
 import Projects from "./Projects"
 import Resume from "./Resume"
 

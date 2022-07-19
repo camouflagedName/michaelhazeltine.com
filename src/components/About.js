@@ -44,7 +44,7 @@ const About = () => {
     }
 
     return (
-        <div className="col-12 col-sm-7 offset-sm-1 d-flex justify-content-center vh-100">
+        <div className="col-12 col-sm-7 offset-sm-1 d-flex justify-content-center">
             <div className="card border-0 bg-transparent mb-auto mt-auto">
                 <div className="text-center shadow-md">
                     <img className='card-img-top' src={pic} style={{ maxWidth: "400px", maxHeight: "auto" }} alt='main' />
