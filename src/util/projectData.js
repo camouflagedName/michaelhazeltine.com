@@ -1,7 +1,20 @@
 const projectData = [
     {
+        title: 'COMBO',
+        description: 'Prototype of a dating app developed with React, Webpack, and Django and deployed through AWS Elastic Beanstalk. Can be accessed using UN: test and PW: test.',
+        links:
+        {
+            github: 'https://github.com/camouflagedName/dating_app',
+            website: 'http://comob-dating-app-dev.us-east-1.elasticbeanstalk.com/',
+        }
+        ,
+        date: "Aug 2022",
+        stack: ["django", "react", "bootstrap", "webpack"],
+        show: true
+    },
+    {
         title: 'GoPursue',
-        description: 'Career exploration app developed using RAILS and REACT deployed with HEROKU',
+        description: 'Career exploration SAAS app developed using RAILS and REACT and deployed with HEROKU.',
         links:
         {
             github: 'https://github.com/camouflagedName/GoPursue_prototype',
@@ -21,6 +34,19 @@ const projectData = [
             html: true,
             css: true
         },
+        show: true
+    },
+    {
+        title: 'Personal Website',
+        description: 'This website was developed as a SPA using React and Bootstrap and deployed through AWS Amplify.',
+        links:
+        {
+            github: 'https://github.com/camouflagedName/dating_app',
+            website: '',
+        }
+        ,
+        date: "Aug 2022",
+        stack: ["react", "bootstrap"],
         show: true
     },
     {
@@ -110,20 +136,20 @@ const projectData = [
             css: true,
             expo: true
         },
-        show: true
+        show: true,
     },
     {
-        title: 'Dating App',
-        description: 'IN PROGRESS web app being developed with DJANGO and REACT',
+        title: 'UNTITLED Student Data App',
+        description: 'IN PROGRESS - SPA being developed using React and Handsontable',
         links:
         {
-            github: '',
-            website: '',
+            github: 'https://github.com/camouflagedName/dating_app',
+            website: 'http://comob-dating-app-dev.us-east-1.elasticbeanstalk.com/',
         }
         ,
-        date: "July 2022",
-        stack: ["django", "react", "bootstrap"],
-        show: false
+        date: "Aug 2022",
+        stack: ["react", "bootstrap"],
+        show: true,
     },
 
 ]
