@@ -140,11 +140,11 @@ const projectData = [
     },
     {
         title: 'UNTITLED Student Data App',
-        description: 'IN PROGRESS - SPA being developed using React and Handsontable',
+        description: 'IN PROGRESS - Single page app being developed with React, Handsontable, and Recharts',
         links:
         {
-            github: 'https://github.com/camouflagedName/dating_app',
-            website: 'http://comob-dating-app-dev.us-east-1.elasticbeanstalk.com/',
+            github: 'https://github.com/camouflagedName/Student_Data_App',
+            website: 'https://main.d26imhbfzmwohh.amplifyapp.com/',
         }
         ,
         date: "Aug 2022",
