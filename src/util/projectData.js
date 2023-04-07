@@ -1,11 +1,22 @@
 const projectData = [
   {
+    title: 'Todoloo',
+    description: 'Prototype of a hybrid travel-based app using TYPESCRIPT/REACT, TAILWIND, and NEXT built for the company Todoloo. Deployed with VERCEL.',
+    links:
+        {
+          github: 'https://github.com/camouflagedName/todoloo_prototype',
+          website: 'https://todoloo-prototype.vercel.app/',
+        },
+    date: 'Feb 2023',
+    stack: ['next', 'react', 'tailwind', 'typsecript'],
+    show: true,
+  },
+  {
     title: 'COMBO',
     description: 'Prototype of a dating app developed with REACT, WEBPACK, and DJANGO and deployed through AWS using Elastic Beanstalk and S3. Demo can be accessed using UN: test and PW: test.',
     links:
         {
           github: 'https://github.com/camouflagedName/dating_app',
-          website: 'http://comob-dating-app-dev.us-east-1.elasticbeanstalk.com/',
         },
     date: 'Aug 2022',
     stack: ['django', 'react', 'bootstrap', 'webpack'],
@@ -17,7 +28,6 @@ const projectData = [
     links:
         {
           github: 'https://github.com/camouflagedName/GoPursue_prototype',
-          website: 'https://go-pursue-prototype.herokuapp.com/',
         },
     date: 'Aug 2021',
     stack: {

@@ -1,4 +1,3 @@
-import React from 'react';
 import projectData from '../util/projectData';
 import ProjectItem from './ProjectItem';
 

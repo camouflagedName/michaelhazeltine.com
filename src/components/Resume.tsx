@@ -1,6 +1,4 @@
-import React from 'react';
-
-const resume = require('../util/docs/MHazeltine_Resume_9.9.pdf');
+const resume = require('../util/docs/MHazeltine_Resume_Apr2023.pdf');
 
 function Resume() {
   return (

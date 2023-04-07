@@ -1,32 +1,41 @@
-/* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react';
 import aboutText from '../util/aboutText';
-
-const pic = require('../util/images/main_pic(cropped).jpg');
+import pic from '../util/images/main_pic(cropped).jpg';
+//const pic = require('../util/images/main_pic(cropped).jpg');
 
 function About() {
   const [text, setText] = useState(aboutText.init);
   const [init, setInit] = useState(true);
-  const [selected, setSelected] = useState();
-  const [prev, setPrev] = useState();
-
+  const [selected, setSelected] = useState("");
+  const [prev, setPrev] = useState("");
   const active = 'nav-link fs-4 active bg-dark';
   const inactive = 'nav-link fs-4';
 
   useEffect(() => {
     if (init) {
       const welcome = document.getElementById('welcome');
-      welcome.className = active;
-      setSelected('welcome');
+
+      if (welcome) {
+        welcome.className = active;
+        setSelected('welcome');
+      }
+
     } else {
       const activeEl = document.getElementById(selected);
       const prevEl = document.getElementById(prev);
-      activeEl.className = active;
-      prevEl.className = inactive;
+
+      if (activeEl) {
+        activeEl.className = active;
+      }
+
+      if (prevEl) {
+        prevEl.className = inactive;
+      }
+
     }
   }, [selected, prev, init]);
 
-  const handleClick = (event) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const { id } = event.currentTarget;
     setInit(false);
     setSelected((previous) => {

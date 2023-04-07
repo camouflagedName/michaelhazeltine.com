@@ -1,7 +1,6 @@
-import React from 'react';
 import aboutText from '../util/aboutText';
-
-const pic = require('../util/images/main_pic(cropped).jpg');
+import pic from '../util/images/main_pic(cropped).jpg';
+//const pic = require('../util/images/main_pic(cropped).jpg');
 
 function About() {
   return (

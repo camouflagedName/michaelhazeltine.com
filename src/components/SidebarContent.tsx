@@ -1,9 +1,10 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/prop-types */
 import React from 'react';
 
-export default function SidebarContent({ handleClick, aboutRef }) {
+export default function SidebarContent({ handleClick, aboutRef }:
+  {
+    handleClick: (param: React.MouseEvent<HTMLElement>) => void,
+    aboutRef: React.RefObject<HTMLLIElement>
+  }) {
   return (
     <>
       <div className="w-100 mb-auto mt-4">

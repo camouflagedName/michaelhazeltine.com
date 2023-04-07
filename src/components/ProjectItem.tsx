@@ -1,9 +1,15 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
+
+interface ProjectItemParams {
+  website: string | undefined;
+  github: string;
+  title: string;
+  description: string;
+  date?: string;
+}
 
 function ProjectItem({
-  website, github, title, description,
-}) {
+  website, github, title, description
+}: ProjectItemParams) {
   const links = website === ''
     ? (
       <div className="mt-auto">

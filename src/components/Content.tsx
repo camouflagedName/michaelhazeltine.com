@@ -1,11 +1,8 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-nested-ternary */
-import React from 'react';
 import About from './AboutAlt';
 import Projects from './Projects';
 import Resume from './Resume';
 
-function Content({ page }) {
+function Content({ page }: { page: string }) {
   const selectedPage = page === 'Resume' ? <Resume /> : page === 'Projects' ? <Projects /> : <About />;
   return selectedPage;
 }
