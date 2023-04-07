@@ -11,7 +11,7 @@ const Sidebar = function Sidebar({ update }: { update: (param: any) => void }) {
   // const [prevItem, setPrevItem] = useState();
 
   const mobileSidebarClass = 'offcanvas d-sm-none offcanvas-start';
-  const sidebarClass = 'd-none d-sm-flex col-3 justify-content-center flex-column visible vh-100';
+  let sidebarClass = 'd-none d-sm-flex col-3 justify-content-center flex-column visible';
   const active = 'border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod';
   const inactive = 'rounded list-group-item list-group-item-action list-color-modified link-hover-mod';
 
@@ -39,6 +39,10 @@ const Sidebar = function Sidebar({ update }: { update: (param: any) => void }) {
 
     if (!isMobile) {
       if (sidebarEl) sidebarEl.className = sidebarClass;
+      if (window.innerHeight === document.documentElement.offsetHeight) {
+        sidebarEl?.classList.add('vh-100');
+      }
+      
 
       // initialize sidebar
       if (init) {
@@ -62,7 +66,7 @@ const Sidebar = function Sidebar({ update }: { update: (param: any) => void }) {
           }
         }
       }
-  }, [init, collapseToggle, isMobile]);
+  }, [init, collapseToggle, isMobile, sidebarClass]);
 
   /* removes the faded OffCanvas backdrop */
   useEffect(() => {
