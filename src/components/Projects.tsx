@@ -12,6 +12,7 @@ function Projects() {
           github={data.links.github}
           website={data.links.website}
           date={data.date}
+          stack={data.stack}
         />
       );
     }

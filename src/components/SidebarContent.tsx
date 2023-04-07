@@ -5,6 +5,7 @@ export default function SidebarContent({ handleClick, aboutRef }:
     handleClick: (param: React.MouseEvent<HTMLElement>) => void,
     aboutRef: React.RefObject<HTMLLIElement>
   }) {
+
   return (
     <>
       <div className="w-100 mb-auto mt-4">
@@ -21,6 +22,14 @@ export default function SidebarContent({ handleClick, aboutRef }:
             ref={aboutRef}
           >
             <p className="fs-4 text-center">About Me</p>
+          </li>
+          <li
+            id="timeline"
+            className="list-group-item list-group-item-action list-color-modified link-hover-mod"
+            onClick={handleClick}
+            ref={aboutRef}
+          >
+            <p className="fs-4 text-center">Timeline</p>
           </li>
           <li
             id="projects"

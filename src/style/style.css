@@ -1,76 +1,76 @@
 :root {
-    --text-color: #C5C6C7;
-    --darker-bg: #0B0C10;
-    --dark-bg: #1F2833;
+  --text-color: #C5C6C7;
+  --darker-bg: #0B0C10;
+  --dark-bg: #1F2833;
 }
 
 .name {
-    font-family: 'Poiret One', cursive;
-    /*font-family: 'Rubik Moonrocks', cursive;*/
-    color: var(--text-color)
+  font-family: 'Poiret One', cursive;
+  /*font-family: 'Rubik Moonrocks', cursive;*/
+  color: var(--text-color)
 }
 
 #app-surface {
-    background-color: var(--dark-bg)
+  background-color: var(--dark-bg)
 }
 
 #comp-surface {
-    background-color: var(--darker-bg)
+  background-color: var(--darker-bg)
 }
 
 #sidebar {
-    background-color: var(--darker-bg)
+  background-color: var(--darker-bg)
 }
 
 #app-text {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .app-text {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 #app-title {
-    color: #66FCF1;
+  color: #66FCF1;
 }
 
 .list-color-modified {
-    background-color: #0B0C10;
-    color: #C5C6C7;
+  background-color: #0B0C10;
+  color: #C5C6C7;
 }
 
 .list-color-modified-active {
-    background-color: #1F2833;
-    color: #45A29E;
+  background-color: #1F2833;
+  color: #45A29E;
 }
 
 .link-hover-mod:hover {
-    background-color: #45A29E;
-    color: white;
+  background-color: #45A29E;
+  color: white;
 }
 
 .pagination {
-    background-color: #1F2833;
+  background-color: #1F2833;
 }
 
 #contact-links a {
-    text-decoration: none;
-    color: #C5C6C7;
+  text-decoration: none;
+  color: #C5C6C7;
 }
 
 #about-text-tab button {
-    color: #66FCF1;
+  color: #66FCF1;
 }
 
 .project-item-decoration {
-    color: #C5C6C7;
-    background-color: #0B0C10;
+  color: #C5C6C7;
+  background-color: #0B0C10;
 }
 
 .project-item-button-decoration {
-    background-color: #1F2833;
-    border-color: #C5C6C7;
-    color: #C5C6C7;
+  background-color: #1F2833;
+  border-color: #C5C6C7;
+  color: #C5C6C7;
 }
 
 /*
@@ -84,3 +84,157 @@
     color: #1F2833;
 }
 */
+
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-4 {
+  position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-4::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: #bbb;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-4 {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-4::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -11px;
+  background-color: #bbb;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left-4 {
+  padding: 0px 40px 20px 0px;
+  left: 0;
+}
+
+/* Place the container to the right */
+.right-4 {
+  padding: 0px 0px 20px 40px;
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left-4::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgba(37, 117, 252, 1);
+  border-width: 10px 1px 10px 10px;
+  border-color: transparent transparent transparent rgba(37, 117, 252, 1);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-4::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgba(245, 87, 108, 1);
+  border-width: 10px 10px 10px 1px;
+  border-color: transparent rgba(245, 87, 108, 1) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-4::after {
+  left: -14px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+  /* Place the timelime to the left */
+  .main-timeline-4::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timeline-4 {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-4::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left-4::after,
+  .right-4::after {
+    left: 18px;
+  }
+
+  .left-4::before {
+    right: auto;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right-4 {
+    left: 0%;
+  }
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right,
+      rgba(106, 17, 203, 1),
+      rgba(37, 117, 252, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right,
+      rgba(106, 17, 203, 1),
+      rgba(37, 117, 252, 1));
+}
+
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #f093fb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to left,
+      rgba(240, 147, 251, 1),
+      rgba(245, 87, 108, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to left,
+      rgba(240, 147, 251, 1),
+      rgba(245, 87, 108, 1));
+}
+
+.project-link-bg {
+  background: linear-gradient(to bottom right,
+      rgba(240, 147, 251, 1),
+      rgba(245, 87, 108, 1))
+}
