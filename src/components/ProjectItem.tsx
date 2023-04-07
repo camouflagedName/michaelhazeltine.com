@@ -19,10 +19,10 @@ function ProjectItem({
     :
     <div className="d-flex row-cols-2 mt-auto">
       <div className="col mt-3">
-        <a href={github} target="_blank" rel="noreferrer" className="btn project-link-bg text-white">GitHub</a>
+        <a href={github} target="_blank" rel="noreferrer" className="btn project-link-bg mt-2 text-white">GitHub</a>
       </div>
       <div className="col mt-3">
-        <a href={website} target="_blank" rel="noreferrer" className="btn project-link-bg text-white">Demo</a>
+        <a href={website} target="_blank" rel="noreferrer" className="btn project-link-bg mt-2 text-white">Demo</a>
       </div>
     </div>
 
