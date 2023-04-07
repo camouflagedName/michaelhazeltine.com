@@ -13,7 +13,7 @@ function ProjectItem({
 }: ProjectItemParams) {
 
   const links = website === '' ?
-    <div className="mt-auto">
+    <div className="mt-3">
       <a href={github} target="_blank" rel="noreferrer" className="btn project-link-bg mt-2 text-white">GitHub</a>
     </div>
     :

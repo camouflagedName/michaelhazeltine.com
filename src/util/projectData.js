@@ -19,7 +19,7 @@ const projectData = [
           github: 'https://github.com/camouflagedName/dating_app',
         },
     date: 'Aug 2022',
-    stack: ['django', 'react', 'bootstrap', 'webpack'],
+    stack: ['django', 'react', 'bootstrap', 'sqlite', 'webpack'],
     show: true,
   },
   {
@@ -42,7 +42,7 @@ const projectData = [
           website: '',
         },
     date: 'Aug 2022',
-    stack: ['react', 'bootstrap'],
+    stack: ['react', 'js', 'bootstrap'],
     show: true,
   },
   {
@@ -54,7 +54,7 @@ const projectData = [
           website: 'https://camouflagedname.github.io/Add_It_Up/',
         },
     date: 'May 2022',
-    stack: ['bootstrap', 'react'],
+    stack: ['bootstrap', 'react', 'rest api'],
     show: true,
   },
   {
@@ -78,7 +78,7 @@ const projectData = [
           website: 'https://main.d1xtuta3lh2pq9.amplifyapp.com/',
         },
     date: 'May 2022',
-    stack: ["react"],
+    stack: ["react", "js", "amplify"],
     show: true,
   },
   {
@@ -102,7 +102,7 @@ const projectData = [
           website: 'https://main.d26imhbfzmwohh.amplifyapp.com/',
         },
     date: 'Aug 2022',
-    stack: ['react', 'bootstrap'],
+    stack: ['react', 'bootstrap', 'handsontable'],
     show: true,
   },
 ];
