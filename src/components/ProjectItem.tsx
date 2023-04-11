@@ -1,3 +1,4 @@
+import Body from "./ProjectItem/Body";
 
 interface ProjectItemParams {
   website: string | undefined;
@@ -35,8 +36,7 @@ function ProjectItem({
       <div className="card mh-100 w-100 rounded-5 bg-dark project-item-decoration">
         <div className="card-body d-flex flex-column rounded-5">
           <h3 className="card-title m-0">{title}</h3>
-          <p className="card-text text-start mb-auto mt-auto d-flex align-items-center" style={{ height: 96 }}>
-            <span>{description}</span></p>
+          <Body text={description} />
           <div className="mt-1">
             {stackArray}
           </div>

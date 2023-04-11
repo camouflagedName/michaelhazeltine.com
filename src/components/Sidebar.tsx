@@ -1,12 +1,14 @@
 import { Offcanvas } from 'bootstrap';
 import { useEffect, useRef, useState } from 'react';
 import SidebarContent from './SidebarContent';
+import useResize from '../hooks/useResize';
 
 const Sidebar = function Sidebar({ update }: { update: (param: any) => void }) {
   const [init, setInit] = useState(true);
-  const [isMobile, setIsMobile] = useState(!(window.innerWidth >= 576));
+  //const [isMobile, setIsMobile] = useState(!(window.innerWidth >= 576));
   const [collapseToggle, setCollapseToggle] = useState(false);
   const [getOffcanvasEl, setOffcanvasEl] = useState<Offcanvas | null>(null);
+  const [isMobile] = useResize(!(window.innerWidth >= 576));
   // const [activeItem, setActiveItem] = useState();
   // const [prevItem, setPrevItem] = useState();
 
@@ -18,24 +20,9 @@ const Sidebar = function Sidebar({ update }: { update: (param: any) => void }) {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLLIElement>(null);
 
-  /* handle window resize */
-  useEffect(() => {
-
-    const handleResize = () => {
-      const isNotDesktop = (window.innerWidth < 576);
-      if (isNotDesktop !== isMobile) setIsMobile(isNotDesktop);
-    }
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-
-  }, [isMobile]);
 
   useEffect(() => {
     const sidebarEl = sidebarRef.current;
-    const aboutRefEl = aboutRef.current;
 
     if (!isMobile) {
       if (sidebarEl) sidebarEl.className = sidebarClass;
@@ -60,7 +47,8 @@ const Sidebar = function Sidebar({ update }: { update: (param: any) => void }) {
         // activate offcanvas sidebar
         if (collapseToggle) {
           // set the first tab as active only on initial open
-            if (init && aboutRefEl) aboutRefEl.className = active;
+            const aboutEl = document.querySelector('#about');
+            if (init && aboutEl) aboutEl.className = active;
             offcanvasElement.show();
             setOffcanvasEl(offcanvasElement);
           }
