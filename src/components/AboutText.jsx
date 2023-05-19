@@ -17,8 +17,8 @@ const AboutText = () => {
             }
       ];
 
-      const dataEl = data.map(({ title, text }) => (
-            <div className="card mb-auto mt-auto bg-dark bg-opacity-75 offset-1 col-10">
+      const dataEl = data.map(({ title, text }, index) => (
+            <div className="card mb-auto mt-auto bg-dark bg-opacity-75 offset-1 col-10" key={index}>
                   <div className="card-body text-white">
                         <h3 className="">{title}</h3>
                         <p className="card-text fs-5">{text}</p>
@@ -26,9 +26,6 @@ const AboutText = () => {
             </div>
       ))
 
-      console.log(dataEl)
-
-      return <About>{dataEl.map(child => child)}</About>;
-
+      return <About>{dataEl}</About>;
 }
 export default AboutText;

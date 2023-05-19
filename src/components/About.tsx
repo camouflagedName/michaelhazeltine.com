@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+
+export {}
+/*import React, { useEffect, useState } from 'react';
 import aboutText from '../util/aboutText';
 import pic from '../util/images/main_pic(cropped).jpg';
 //const pic = require('../util/images/main_pic(cropped).jpg');
@@ -115,3 +117,4 @@ function About() {
 }
 
 export default About;
+*/

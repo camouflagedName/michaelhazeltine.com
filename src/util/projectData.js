@@ -8,7 +8,7 @@ const projectData = [
           website: 'https://todoloo-prototype.vercel.app/',
         },
     date: 'Feb 2023',
-    stack: ['next', 'react', 'tailwind', 'typsecript'],
+    stack: ['next', 'react', 'tailwind', 'typsecript', 'jest'],
     show: true,
   },
   {
@@ -17,6 +17,7 @@ const projectData = [
     links:
         {
           github: 'https://github.com/camouflagedName/dating_app',
+          website: '',
         },
     date: 'Aug 2022',
     stack: ['django', 'react', 'bootstrap', 'sqlite', 'webpack'],
@@ -28,6 +29,7 @@ const projectData = [
     links:
         {
           github: 'https://github.com/camouflagedName/GoPursue_prototype',
+          website: '',
         },
     date: 'Aug 2021',
     stack: ["rails", "pgsql", "react", "bootstrap"],
@@ -42,7 +44,7 @@ const projectData = [
           website: '',
         },
     date: 'Aug 2022',
-    stack: ['react', 'js', 'bootstrap'],
+    stack: ['react', 'typescript', 'bootstrap'],
     show: true,
   },
   {
@@ -78,7 +80,7 @@ const projectData = [
           website: 'https://main.d1xtuta3lh2pq9.amplifyapp.com/',
         },
     date: 'May 2022',
-    stack: ["react", "js", "amplify"],
+    stack: ["react", "js", "amplify", "jest", "bootstrap"],
     show: true,
   },
   {
@@ -94,7 +96,7 @@ const projectData = [
     show: true,
   },
   {
-    title: 'UNTITLED Student Data App',
+    title: 'Student Data App',
     description: 'IN PROGRESS - Single page app being developed with React, Handsontable, and Recharts',
     links:
         {

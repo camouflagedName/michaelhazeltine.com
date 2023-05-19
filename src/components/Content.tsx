@@ -1,11 +1,11 @@
-import About from './AboutAlt';
+//import About from './AboutAlt';
+import AboutText from './AboutText';
 import Projects from './Projects';
 import Resume from './Resume';
 import Timeline from './Timeline';
 
 function Content({ page }: { page: string }) {
-  //const selectedPage = page === 'Resume' ? <Resume /> : page === 'Projects' ? <Projects /> : <About />;
-  let selectedPage: JSX.Element = <About />;
+  let selectedPage: JSX.Element = <AboutText />;
 
   switch (page) {
     case 'Resume':
@@ -15,13 +15,13 @@ function Content({ page }: { page: string }) {
       selectedPage =  <Projects />;
       break;
     case 'About':
-      selectedPage = <About />;
+      selectedPage = <AboutText />;
       break;
     case 'Timeline':
       selectedPage = <Timeline />
       break;
     default:
-      selectedPage = <About />;
+      selectedPage = <AboutText />;
   }
   
   return selectedPage;

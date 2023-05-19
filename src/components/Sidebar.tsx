@@ -99,7 +99,7 @@ const Sidebar = function Sidebar({ update }: { update: (param: any) => void }) {
   return (
     <>
       <div className="d-sm-none">
-        <nav className="navbar bg-dark fixed-top">
+        <nav className="navbar bg-dark sticky-top">
           <div className="container-fluid">
             <button className="navbar-toggler navbar-dark bg-dark" type="button" aria-controls="offcanvasNavbar" onClick={handleSidebarToggle}>
               <span className="navbar-toggler-icon" />
