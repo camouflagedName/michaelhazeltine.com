@@ -1,14 +1,26 @@
 const projectData = [
   {
+    title: 'Comic Book App',
+    description: 'Prototype of a shopping app using TYPESCRIPT/REACT, FLOWBITE, and GATSBY built for a comic book artist. Deployed with NETLIFY.',
+    links:
+        {
+          github: 'https://github.com/camouflagedName/comic-book-website',
+          website: 'https://main--comic-web-app.netlify.app/',
+        },
+    date: 'May 2023',
+    stack: ['gatsby', 'react', 'tailwind', 'typsecript'],
+    show: true,
+  },
+  {
     title: 'Todoloo',
-    description: 'Prototype of a hybrid travel-based app using TYPESCRIPT/REACT, TAILWIND, and NEXT built for the company Todoloo. Deployed with VERCEL.',
+    description: 'Prototype of a hybrid travel-based app using TYPESCRIPT/REACT, TAILWIND, MONGODB, and NEXT built for the company Todoloo. Deployed with VERCEL.',
     links:
         {
           github: 'https://github.com/camouflagedName/todoloo_prototype',
           website: 'https://todoloo-prototype.vercel.app/',
         },
     date: 'Feb 2023',
-    stack: ['next', 'react', 'tailwind', 'typsecript', 'jest'],
+    stack: ['next', 'react', 'tailwind', 'typsecript', 'jest', 'mongodb'],
     show: true,
   },
   {
@@ -77,7 +89,7 @@ const projectData = [
     links:
         {
           github: 'https://github.com/camouflagedName/color_grid',
-          website: 'https://main.d1xtuta3lh2pq9.amplifyapp.com/',
+          website: 'https://main.dceeutgwaj18a.amplifyapp.com/',
         },
     date: 'May 2022',
     stack: ["react", "js", "amplify", "jest", "bootstrap"],

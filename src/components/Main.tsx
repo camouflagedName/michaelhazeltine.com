@@ -7,9 +7,12 @@ function Main() {
   const changeContent: (param: string) => void = content => setPage(content);
 
   return (
-    <div className=" d-flex container-fluid min-vh-100 p-0" id="app-surface">
-      <Sidebar update={changeContent} />
-      <Content page={page} />
+    <div className="d-flex flex-column flex-sm-row vh-100 p-0" id="app-surface">
+      <Sidebar update={changeContent} title={page}/>
+      <div className="container-fluid p-0" style={{ overflow: "auto" }}>
+        <h1 className="app-text bg-dark text-center py-2 mb-3 d-none d-sm-block">{page}</h1>
+        <Content page={page} />
+      </div>
     </div>
   );
 }
