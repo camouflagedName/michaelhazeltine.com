@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Sidebar from './Sidebar';
-import Content from './Content';
+import { Outlet } from 'react-router-dom';
 
 function Main() {
   const [page, setPage] = useState('Error changing content.');
@@ -11,7 +11,7 @@ function Main() {
       <Sidebar update={changeContent} title={page}/>
       <div className="container-fluid p-0" style={{ overflow: "auto" }}>
         <h1 className="app-text bg-dark text-center py-2 mb-3 d-none d-sm-block">{page}</h1>
-        <Content page={page} />
+        <Outlet />
       </div>
     </div>
   );

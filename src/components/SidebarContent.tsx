@@ -1,10 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function SidebarContent({ handleClick, aboutRef }:
-  {
-    handleClick: (param: React.MouseEvent<HTMLElement>) => void,
-    aboutRef: React.RefObject<HTMLLIElement>
-  }) {
+export default function SidebarContent({ handleClick }: { handleClick: (param: React.MouseEvent<HTMLElement>) => void }) {
 
   return (
     <>
@@ -14,43 +11,33 @@ export default function SidebarContent({ handleClick, aboutRef }:
         </h1>
       </div>
       <div className="w-100 mb-auto mt-auto">
-        <ul className="list-group">
-          <li
-            id="about"
-            className="list-group-item list-group-item-action list-color-modified link-hover-mod"
-            onClick={handleClick}
-            ref={aboutRef}
-          >
-            <p className="fs-4 text-center">About Me</p>
+        <ul className="link-group">
+          <li id="about">
+            <Link  to={"/"} onClick={handleClick} className='list-group-link rounded list-group-item list-group-item-action list-color-modified link-hover-mod'>
+              <div className="fs-4 text-center">About Me</div>
+            </Link>
           </li>
           <li
             id="timeline"
-            className="list-group-item list-group-item-action list-color-modified link-hover-mod"
-            onClick={handleClick}
-            ref={aboutRef}
           >
-            <p className="fs-4 text-center">Timeline</p>
+            <Link to={"/timeline"} onClick={handleClick} className='list-group-link rounded list-group-item list-group-item-action list-color-modified link-hover-mod'>
+              <div className="fs-4 text-center">Timeline</div>
+            </Link>
           </li>
           <li
             id="projects"
-            className="rounded list-group-item list-group-item-action list-color-modified link-hover-mod"
-            onClick={handleClick}
           >
-            <p className="fs-4 text-center">Projects</p>
+            <Link to={"/projects"} onClick={handleClick} className='list-group-link rounded list-group-item list-group-item-action list-color-modified link-hover-mod'>
+              <div className="fs-4 text-center">Projects</div>
+            </Link>
           </li>
           <li
             id="resume"
-            className="rounded list-group-item list-group-item-action list-color-modified link-hover-mod"
-            onClick={handleClick}
           >
-            <p className="fs-4 text-center">Resume</p>
+            <Link to={"/resume"} onClick={handleClick} className='list-group-link rounded list-group-item list-group-item-action list-color-modified link-hover-mod'>
+              <div className="fs-4 text-center">Resume</div>
+            </Link>
           </li>
-          {/*
-              <li id="about" className="rounded list-group-item list-group-item-action
-                list-color-modified link-hover-mod" onClick={handleClick}>
-                  <p className='fs-4 text-center'>About This Website</p>
-              </li>
-          */}
         </ul>
       </div>
       <div className="w-100 mt-auto mb-4">

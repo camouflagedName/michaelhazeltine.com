@@ -4,6 +4,7 @@
   --dark-bg: #1F2833;
 }
 
+
 .name {
   font-family: 'Poiret One', cursive;
   /*font-family: 'Rubik Moonrocks', cursive;*/
@@ -34,17 +35,33 @@
   color: #66FCF1;
 }
 
-.list-color-modified {
+.link-group {
+  --bs-list-group-border-width: 1px;
+  --bs-list-group-border-radius: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: var(--bs-list-group-border-radius);
+}
+
+.list-group-link {
+  padding: 1rem;
+  text-decoration: none;
+}
+
+
+.list-color-modified, .list-color-modified a {
   background-color: #0B0C10;
   color: #C5C6C7;
 }
 
-.list-color-modified-active {
+.list-color-modified-active, .list-color-modified-active a {
   background-color: #1F2833;
   color: #45A29E;
 }
 
-.link-hover-mod:hover {
+.link-hover-mod:hover, .link-hover-mod:hover a {
   background-color: #45A29E;
   color: white;
 }

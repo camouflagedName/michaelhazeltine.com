@@ -5,21 +5,14 @@ import useResize from '../hooks/useResize';
 
 const Sidebar = function Sidebar({ update, title }: { update: (param: any) => void, title: string }) {
   const [init, setInit] = useState(true);
-  //const [isMobile, setIsMobile] = useState(!(window.innerWidth >= 576));
   const [collapseToggle, setCollapseToggle] = useState(false);
   const [getOffcanvasEl, setOffcanvasEl] = useState<Offcanvas | null>(null);
   const [isMobile] = useResize(!(window.innerWidth >= 576));
-  // const [activeItem, setActiveItem] = useState();
-  // const [prevItem, setPrevItem] = useState();
-
   const mobileSidebarClass = 'offcanvas d-sm-none offcanvas-start';
   let sidebarClass = 'd-none d-sm-flex col-3 justify-content-center flex-column visible';
   const active = 'border border-0 list-group-item list-group-item-action list-color-modified-active link-hover-mod';
   const inactive = 'rounded list-group-item list-group-item-action list-color-modified link-hover-mod';
-
   const sidebarRef = useRef<HTMLDivElement>(null);
-  const aboutRef = useRef<HTMLLIElement>(null);
-
 
   useEffect(() => {
     const sidebarEl = sidebarRef.current;
@@ -65,7 +58,7 @@ const Sidebar = function Sidebar({ update, title }: { update: (param: any) => vo
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
 
-    const targetEl = event.currentTarget;
+    const targetEl = event.currentTarget.parentNode as HTMLElement;
     const altTarget = event.target as HTMLElement;
     const prevActiveEl = document.querySelector('.list-color-modified-active');
 
@@ -102,7 +95,7 @@ const Sidebar = function Sidebar({ update, title }: { update: (param: any) => vo
       <MobileSidebar sidebarToggle={handleSidebarToggle} title={title} />
 
       <div id="sidebar-lg" ref={sidebarRef}>
-        <SidebarContent handleClick={handleClick} aboutRef={aboutRef} />
+        <SidebarContent handleClick={handleClick} />
       </div>
     </>
   );
