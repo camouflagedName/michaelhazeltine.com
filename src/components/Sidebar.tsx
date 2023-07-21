@@ -26,7 +26,10 @@ const Sidebar = function Sidebar({ update, title }: { update: (param: any) => vo
 
       // initialize sidebar
       if (init) {
-        const aboutEl = document.querySelector('#about');
+        const url = window.location.pathname;
+        let modURL = url.replace("/", "#")
+        if (modURL.length === 1) modURL += 'about';
+        const aboutEl = document.querySelector(modURL);
         if (aboutEl) aboutEl.className = active;
       }
     } else {

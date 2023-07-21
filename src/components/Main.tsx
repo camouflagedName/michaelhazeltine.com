@@ -1,10 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
 import { Outlet } from 'react-router-dom';
 
 function Main() {
-  const [page, setPage] = useState('Error changing content.');
+  const [page, setPage] = useState('');
   const changeContent: (param: string) => void = content => setPage(content);
+
+  useEffect(() => {
+    const url = window.location.pathname;
+    const modURL = url.replace("/", "")
+    const firstLetter = modURL.charAt(0).toUpperCase();
+    const title = modURL.replace(modURL[0], firstLetter)
+    if (title === "") setPage("About Me");
+    else setPage(title);
+  }, [])
+
+  
 
   return (
     <div className="d-flex flex-column flex-sm-row vh-100 p-0" id="app-surface">
