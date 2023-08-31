@@ -1,4 +1,4 @@
-const resume = require('../util/docs/MHazeltine_Resume_Apr2023.pdf');
+import resume from '../util/docs/resume.pdf'
 
 function Resume() {
   return (

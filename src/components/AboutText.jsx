@@ -5,7 +5,7 @@ const AboutText = () => {
       const data = [
             {
                   title: "Welcome",
-                  text: 'Welcome! My name is Michael Hazeltine and I am a web developer/programmer.',
+                  text: 'Welcome! I am Michael Hazeltine, and this is my web page, designed and developed by me. I am a fullstack web developer and programmer.',
             },
             {
                   title: "Professional",
@@ -13,7 +13,7 @@ const AboutText = () => {
             },
             {
                   title: "Personal",
-                  text: 'I live in DC with my girlfriend and two dachshunds. In my free time, I like to work on and listen to music, exercise, and explore the city.',
+                  text: 'I live in DC with my girlfriend and two dachshunds. On the weekends, I work as a supervisor at a local music venue. And in my free time, I like to work on and listen to music, travel, and explore the city. ',
             }
       ];
 

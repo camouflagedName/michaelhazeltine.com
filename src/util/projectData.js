@@ -52,11 +52,23 @@ const projectData = [
     description: 'This website was developed as a SPA using React and Bootstrap and deployed through AWS Amplify.',
     links:
         {
-          github: 'https://github.com/camouflagedName/dating_app',
+          github: 'https://github.com/camouflagedName/michaelhazeltine.com',
           website: '',
         },
     date: 'Aug 2022',
     stack: ['react', 'typescript', 'bootstrap'],
+    show: true,
+  },
+  {
+    title: 'API Viewer',
+    description: 'Deployed with Heroku. Allows users to retrieve and view data from an API in both a list and hash-like formats. Users can then tunnel through the data. Users can also save and retrieve data.',
+    links:
+        {
+          github: 'https://github.com/camouflagedName/api-viewer',
+          website: 'https://api-viewer-58a4ff446463.herokuapp.com/',
+        },
+    date: 'Sept 2022',
+    stack: ['jquery', 'flask', 'sqlite', 'bootstrap'],
     show: true,
   },
   {
