@@ -1,5 +1,17 @@
 const projectData = [
   {
+    title: 'ADA Seating App',
+    description: 'IN PROGRESS - seating accommodation app for local music venue. Frontend deployed with AWS/Amplify. Backend deployed with Heroku.',
+    links:
+        {
+          github: 'https://github.com/camouflagedName/ADASeatingApp/tree/development',
+          website: 'https://development.d1nz1b86b1hzbx.amplifyapp.com/',
+        },
+    date: 'October 2023',
+    stack: ['mongodb', 'express', 'react', 'node', 'chakra-ui'],
+    show: true,
+  },
+  {
     title: 'Comic Book App',
     description: 'Prototype of a shopping app using TYPESCRIPT/REACT, FLOWBITE, and GATSBY built for a comic book artist. Deployed with NETLIFY.',
     links:
@@ -9,7 +21,7 @@ const projectData = [
         },
     date: 'May 2023',
     stack: ['gatsby', 'react', 'tailwind', 'typsecript'],
-    show: true,
+    show: false,
   },
   {
     title: 'Todoloo',
