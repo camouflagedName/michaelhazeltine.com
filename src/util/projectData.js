@@ -12,6 +12,18 @@ const projectData = [
     show: true,
   },
   {
+    title: 'ADA Seating App Server',
+    description: 'IN PROGRESS - server for seating accommodation app for local music venue. Added UI to view details about server. Deployed with Heroku.',
+    links:
+        {
+          github: 'https://github.com/camouflagedName/ADASeatingApp/tree/backend-heroku',
+          website: 'https://ada-seating-server-51a972bcadaa.herokuapp.com/',
+        },
+    date: 'October 2023',
+    stack: ['mongodb', 'express', 'node', 'chakra-ui', 'bootstrapcss'],
+    show: true,
+  },
+  {
     title: 'Comic Book App',
     description: 'Prototype of a shopping app using TYPESCRIPT/REACT, FLOWBITE, and GATSBY built for a comic book artist. Deployed with NETLIFY.',
     links:
